@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -27,5 +28,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate(){
         transform.rotation = Quaternion.Euler(0, 0, rb.velocity.y * rotationSpeed);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision){
+        GameManager.instance.GameOver();
     }
 }

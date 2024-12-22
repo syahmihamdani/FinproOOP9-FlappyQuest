@@ -31,6 +31,6 @@ public class RockSpawner : MonoBehaviour
         Vector3 spawnPosition = transform.position + new Vector3(0, Random.Range(-heightRange, heightRange));
         GameObject rock = Instantiate(obstacle, spawnPosition, Quaternion.identity);
 
-        Destroy(rock, 12f);
+        Destroy(rock, 6f);
     }
 }

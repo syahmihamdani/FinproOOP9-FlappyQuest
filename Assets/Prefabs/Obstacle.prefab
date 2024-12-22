@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5812745874396404436}
   - component: {fileID: 9033464977843842017}
-  - component: {fileID: 4566499414641856320}
+  - component: {fileID: 7302269528326914221}
+  - component: {fileID: 1246060272972646695}
   m_Layer: 0
   m_Name: UpperRock
   m_TagString: Untagged
@@ -85,8 +86,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &4566499414641856320
-BoxCollider2D:
+--- !u!68 &7302269528326914221
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -117,19 +118,41 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.002757866, y: -0.012870327}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
-    newSize: {x: 0.32, y: 0.32}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.20048973, y: 0.29425934}
+  m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.09191255, y: -0.073093794}
+  - {x: -0.08217287, y: 0.020309057}
+  - {x: -0.076805994, y: 0.031515233}
+  - {x: -0.08000923, y: 0.061020184}
+  - {x: -0.05836675, y: 0.12706572}
+  - {x: -0.016292846, y: 0.12925577}
+  - {x: 0.074341655, y: 0.11822009}
+  - {x: 0.08863252, y: 0.038736932}
+  - {x: 0.07807021, y: -0.03356536}
+  - {x: 0.08772431, y: -0.14443381}
+  - {x: 0.06204397, y: -0.16362712}
+  - {x: -0.06430201, y: -0.16438578}
+  - {x: -0.09323629, y: -0.15949781}
+  - {x: -0.09651131, y: -0.13701713}
+  - {x: -0.08826393, y: -0.06853791}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!114 &1246060272972646695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091550441876419504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b3b336620cff8a4e8375e2b3606a738, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.65
 --- !u!1 &3379503168526829338
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,6 +163,8 @@ GameObject:
   m_Component:
   - component: {fileID: 124712750190217753}
   - component: {fileID: 8914542592833108154}
+  - component: {fileID: 8307850306409402315}
+  - component: {fileID: 7665191584828116234}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Untagged
@@ -156,7 +181,7 @@ Transform:
   m_GameObject: {fileID: 3379503168526829338}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.89, y: 0.4358049, z: 0.03310862}
+  m_LocalPosition: {x: -3.18, y: 1.22, z: 0.03310862}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -176,7 +201,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b3b336620cff8a4e8375e2b3606a738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 4
+--- !u!61 &8307850306409402315
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3379503168526829338}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 21.071022, y: 0.100756645}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8063183, y: 5.3661146}
+  m_EdgeRadius: 0
+--- !u!114 &7665191584828116234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3379503168526829338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e48e6f09ae5ce1448785c7e86fe2ce0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7173970640753684666
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,7 +269,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1411827933191255291}
   - component: {fileID: 8268869294050636690}
-  - component: {fileID: 3111730842628656708}
+  - component: {fileID: 7707681817574275003}
+  - component: {fileID: 8462931592692091682}
   m_Layer: 0
   m_Name: LowerRock
   m_TagString: Untagged
@@ -262,8 +345,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &3111730842628656708
-BoxCollider2D:
+--- !u!68 &7707681817574275003
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -294,16 +377,31 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0044906437, y: -0.013471648}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
-    newSize: {x: 0.32, y: 0.32}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.20773622, y: 0.2930567}
+  m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.055114985, y: 0.12857608}
+  - {x: -0.060147207, y: 0.10752884}
+  - {x: -0.08299263, y: 0.011980211}
+  - {x: -0.09416216, y: -0.1560441}
+  - {x: 0.069148645, y: -0.16217767}
+  - {x: 0.07804813, y: 0.11903031}
+  - {x: -0.051923834, y: 0.12755577}
+  - {x: 0.023963362, y: 0.050061405}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!114 &8462931592692091682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7173970640753684666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b3b336620cff8a4e8375e2b3606a738, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.65
