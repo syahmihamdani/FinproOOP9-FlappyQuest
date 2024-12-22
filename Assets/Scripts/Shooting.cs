@@ -14,6 +14,13 @@ public class Shooting : MonoBehaviour
 
     Vector2 lookDirection;
     float lookAngle;
+    AudioManager audioManager;
+
+    private void Awake(){
+
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+    }
+
 
     void Start()
     {
@@ -38,12 +45,14 @@ public class Shooting : MonoBehaviour
         // Fire bullet on left mouse button click
         if (Input.GetMouseButtonDown(0))
         {
+
             Shoot();
         }
     }
 
     void Shoot()
     {
+        audioManager.PlaySFX(audioManager.shoot);
         // Get an inactive bullet from the pool
         GameObject bullet = GetPooledBullet();
         if (bullet != null)

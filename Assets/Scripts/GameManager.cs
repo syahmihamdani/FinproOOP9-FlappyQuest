@@ -8,12 +8,17 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     [SerializeField] private GameObject gameOverScreen;
 
+    AudioManager audioManager;
+
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
-        }Time.timeScale = 1f;
+        }
+        Time.timeScale = 1f;
+
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
     }
     // Start is called before the first frame update
     void Start()
@@ -29,11 +34,18 @@ public class GameManager : MonoBehaviour
 
     public void GameOver(){
         gameOverScreen.SetActive(true);
-
+        if (audioManager != null)
+        {
+            audioManager.StopBackgroundMusic();
+        }
         Time.timeScale = 0f;
     }
 
     public void RestartGame(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    
+    public void MainMenu(){
+        SceneManager.LoadSceneAsync(0);
     }
 }

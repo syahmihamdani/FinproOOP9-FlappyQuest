@@ -11,6 +11,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float rotationSpeed = 10f;
 
     private Rigidbody2D rb;
+    AudioManager audioManager;
+
+    private void Awake(){
+
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         if (Keyboard.current.spaceKey.wasPressedThisFrame){
+            audioManager.PlaySFX(audioManager.flap);
             rb.velocity = Vector2.up * playerVelocity;
         }
     }
