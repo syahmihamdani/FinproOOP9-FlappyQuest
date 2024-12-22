@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour
+public class Player : MonoBehaviour
 {
 
     [SerializeField] private float playerVelocity = 3f;
@@ -12,10 +12,21 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D rb;
     AudioManager audioManager;
+    private static Player instance;
 
     private void Awake(){
 
         audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+         if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        
     }
 
     // Start is called before the first frame update

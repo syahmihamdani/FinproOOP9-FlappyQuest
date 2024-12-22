@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Score : MonoBehaviour
 {
@@ -36,11 +37,19 @@ public class Score : MonoBehaviour
             PlayerPrefs.SetInt("BestScore", score);
             bestScore.text = score.ToString();
         }
+        if (score == 15){
+            Level1Boss();
+        }
     }
 
     public void UpdateScore(){
         score++;
         currentScore.text = score.ToString();
         UpdateBestScore();
+    }
+
+    public void Level1Boss(){
+        
+        SceneManager.LoadSceneAsync(2);
     }
 }

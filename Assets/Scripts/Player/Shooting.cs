@@ -9,7 +9,7 @@ public class Shooting : MonoBehaviour
     public float bulletSpeed = 50;
     public GameObject player;
 
-    public int poolSize = 10; // Number of bullets in the pool
+    public int poolSize = 5; // Number of bullets in the pool
     private List<GameObject> bulletPool; // Pool of bullets
 
     Vector2 lookDirection;

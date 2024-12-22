@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 8177106075341488769}
   - component: {fileID: 335551144819736910}
   m_Layer: 0
-  m_Name: Character (2)
+  m_Name: Ranged
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

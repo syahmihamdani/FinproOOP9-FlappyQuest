@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - AudioManager
+  - GameManager
+  - Fireball
+  - Enemy
   layers:
   - Default
   - TransparentFX

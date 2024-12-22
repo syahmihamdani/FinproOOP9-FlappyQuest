@@ -42,6 +42,11 @@ public class GameManager : MonoBehaviour
     }
 
     public void RestartGame(){
+                    GameObject player = GameObject.FindWithTag("Player");
+            if (player != null)
+            {
+                player.transform.position = new Vector3(-5.58f, 0.79f, 1); // Set to desired spawn position
+            }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     
